@@ -1,0 +1,7 @@
+language: node_js
+node_js:
+- 0.10.1
+before_install:
+  - npm install -g git+https://github.com/redhataccess/dockerfile_lint
+script:
+  - find . -name "Dockerfile*" -exec dockerfile_lint -f {} \;
